@@ -11,11 +11,11 @@ import Foundation
 
 @objc open class MBRateUs: NSObject{
 
-    open static let sharedInstance = MBRateUs()
+    static let sharedInstance = MBRateUs()
 
-    open var rateUsInfo = MBRateUsInfo()
+    var rateUsInfo = MBRateUsInfo()
     
-    open func showRateUs(_ base:UIViewController, positiveBlock:@escaping ()->Void, negativeBlock:@escaping ()->Void, dismissBlock:@escaping ()->Void){
+    func showRateUs(_ base:UIViewController, positiveBlock:@escaping ()->Void, negativeBlock:@escaping ()->Void, dismissBlock:@escaping ()->Void){
         let podBundle = Bundle(for: type(of: self))
         let storyboard = UIStoryboard(name: "RateUs", bundle: podBundle)
         let vc = storyboard.instantiateInitialViewController() as! MBRateUsViewController
