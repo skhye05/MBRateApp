@@ -29,4 +29,9 @@ import Foundation
         base.present(vc, animated: true, completion: nil)
     }
     
+    open func sharedInstance() -> MBRateUs{
+        print("Hello");
+        return self._sharedInstances;
+    }
+    
 }
