@@ -9,7 +9,7 @@
 import Foundation
 
 
-@objc open class MBRateUs{
+@objc open class MBRateUs: NSObject{
 
     open static let sharedInstance = MBRateUs()
 
