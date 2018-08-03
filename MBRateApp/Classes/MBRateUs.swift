@@ -13,7 +13,7 @@ import Foundation
 
     static let sharedInstance = MBRateUs()
 
-    var rateUsInfo = MBRateUsInfo()
+    public var rateUsInfo = MBRateUsInfo()
     
     open func showRateUs(_ base:UIViewController, positiveBlock:@escaping ()->Void, negativeBlock:@escaping ()->Void, dismissBlock:@escaping ()->Void){
         let podBundle = Bundle(for: type(of: self))
