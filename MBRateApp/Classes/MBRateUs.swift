@@ -11,7 +11,7 @@ import Foundation
 
 @objc open class MBRateUs: NSObject{
 
-    static let sharedInstances = MBRateUs()
+    static let sharedInstance = MBRateUs()
 
     public var rateUsInfo = MBRateUsInfo()
     
@@ -31,11 +31,6 @@ import Foundation
     
     open func setTitle(_ title: String) {
         self.rateUsInfo.title = title;
-    }
-    
-     open func sharedInstance() {
-        print("Hello");
-        return self.sharedInstances;
     }
     
 }
