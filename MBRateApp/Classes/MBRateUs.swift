@@ -29,9 +29,8 @@ import Foundation
         base.present(vc, animated: true, completion: nil)
     }
     
-    open func sharedInstance() {
-        print("Hello");
-        return self._sharedInstances;
+    open func setTitle(_ title: String) {
+        self.rateUsInfo.title = title;
     }
     
 }
