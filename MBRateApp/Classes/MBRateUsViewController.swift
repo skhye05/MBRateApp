@@ -8,7 +8,7 @@
 
 import Foundation
 
-open public struct MBRateUsInfo {
+public struct MBRateUsInfo {
     
     public init() { }
     
