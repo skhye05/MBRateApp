@@ -11,7 +11,7 @@ import Foundation
 
 open class MBRateUs{
 
-    open static let sharedInstance = MBRateUs()
+    open static let sharedInstances = MBRateUs()
 
     open var rateUsInfo = MBRateUsInfo()
     
@@ -27,6 +27,11 @@ open class MBRateUs{
         vc.rateUsInfo = self.rateUsInfo
         
         base.present(vc, animated: true, completion: nil)
+    }
+    
+    open func sharedInstance() -> MBRateUs{
+        print("Hello");
+        return self._sharedInstances;
     }
     
 }
