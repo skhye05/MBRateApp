@@ -15,7 +15,7 @@ import Foundation
 
     open var rateUsInfo = MBRateUsInfo()
     
-    open func showRateUs(_ base:UIViewController, positiveBlock:@escaping ()->Void, negativeBlock:@escaping ()->Void, dismissBlock:@escaping ()->Void){
+    open func showRateUs(_ base:UIViewController, positiveBlock:@escaping (_ rate:Int)->Void, negativeBlock:@escaping (_ rate:Int)->Void, dismissBlock:@escaping ()->Void){
         let podBundle = Bundle(for: type(of: self))
         let storyboard = UIStoryboard(name: "RateUs", bundle: podBundle)
         let vc = storyboard.instantiateInitialViewController() as! MBRateUsViewController
