@@ -113,6 +113,7 @@ class MBRateUsViewController : UIViewController {
     @IBAction func starTouched(_ sender: UIButton) {
         self.starsMask.isHidden = false
         if sender.tag >= 4 {
+            print("sender.tag")
             self.resultLabel.text = self.rateUsInfo?.positive
             self.callToActionButton.setTitle("Rate in the AppStore", for: UIControlState())
             self.shouldRate = true
