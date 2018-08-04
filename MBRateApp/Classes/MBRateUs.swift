@@ -81,4 +81,12 @@ import Foundation
         self.rateUsInfo.itunesId = itunesId
     }
     
+    open func setOnPositiveButtonText(_ onPositiveButtonText:String){
+        self.rateUsInfo.onPositiveButtonText = onPositiveButtonText
+    }
+    
+    open func setOnNegativeButtonText(_ onNegativeButtonText:String){
+        self.rateUsInfo.onNegativeButtonText = onNegativeButtonText
+    }
+    
 }
