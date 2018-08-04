@@ -34,7 +34,7 @@ import Foundation
     }
     
     open func setSubtitle(_ subtitle:String){
-        self.rateUsInfo.subtitle
+        self.rateUsInfo.subtitle = subtitle
     }
 
     open func setPositive(_ positive:String){
@@ -74,7 +74,7 @@ import Foundation
     }
 
     open func setDismissButtonColor(_ dismissButtonColor:UIColor){
-        self.rateUsInfo.dismissButtonColor - dismissButtonColor
+        self.rateUsInfo.dismissButtonColor = dismissButtonColor
     }
 
     open func setItunesId(_ itunesId:String){
