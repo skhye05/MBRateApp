@@ -54,9 +54,10 @@ class MBRateUsViewController : UIViewController {
     @IBOutlet weak var dismissButton: UIButton!
     
     var rateUsInfo : MBRateUsInfo?
-    var positiveBlock : (()->Void)?
-    var negativeBlock : (()->Void)?
+    var positiveBlock : ((_ rate:Int)->Void)?
+    var negativeBlock : ((_ rate:Int)->Void)?
     var dismissBlock : (()->Void)?
+    private var rating: Int = 0
     
     var shouldRate : Bool
     var starImageOn : UIImage
@@ -114,6 +115,7 @@ class MBRateUsViewController : UIViewController {
     
     @IBAction func starTouched(_ sender: UIButton) {
         self.starsMask.isHidden = false
+        self.rating = sender.tag
         if sender.tag >= 4 {
             self.resultLabel.text = self.rateUsInfo?.positive
             self.callToActionButton.setTitle(self.rateUsInfo?.onPositiveButtonText, for: UIControlState())
@@ -143,9 +145,9 @@ class MBRateUsViewController : UIViewController {
                     UIApplication.shared.openURL(URL(string: "http://itunes.apple.com/app/id\(itunesId)")!)
                 }
 
-                self.positiveBlock?()
+                self.positiveBlock?(self.rating)
             }else {
-                self.negativeBlock?()
+                self.negativeBlock?(self.rating)
             }
         })
     }
