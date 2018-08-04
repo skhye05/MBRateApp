@@ -25,6 +25,8 @@ public struct MBRateUsInfo {
     public var titleImage = nil as UIImage?
     public var dismissButtonColor = UIColor.black
     public var itunesId = nil as String?
+    public var onPositiveButtonText = "Proceed with rating"
+    public var onNegativeButtonText = "Send us feedback"
 }
 
 
@@ -113,15 +115,14 @@ class MBRateUsViewController : UIViewController {
     @IBAction func starTouched(_ sender: UIButton) {
         self.starsMask.isHidden = false
         if sender.tag >= 4 {
-            print("sender.tag")
             self.resultLabel.text = self.rateUsInfo?.positive
-            self.callToActionButton.setTitle("Rate in the AppStore", for: UIControlState())
+            self.callToActionButton.setTitle(self.rateUsInfo?.onPositiveButtonText, for: UIControlState())
             self.shouldRate = true
             self.callToActionButton.backgroundColor = self.rateUsInfo?.positiveButtonColor
         }
         else {
             self.resultLabel.text = self.rateUsInfo?.negative
-            self.callToActionButton.setTitle("Send us feedback", for: UIControlState())
+            self.callToActionButton.setTitle(self.rateUsInfo?.onNegativeButtonText, for: UIControlState())
             self.shouldRate = false
             self.callToActionButton.backgroundColor = self.rateUsInfo?.negativeButtonColor
         }
