@@ -101,7 +101,9 @@ class MBRateUsViewController : UIViewController {
         for button: UIButton in self.starButtons {
             if button.tag <= sender.tag {
                 button.setImage(starImageOn, for: UIControlState())
-            }
+            } else {
+                button.setImage(starImageOff, for: UIControlState())
+            } 
         }
     }
     
