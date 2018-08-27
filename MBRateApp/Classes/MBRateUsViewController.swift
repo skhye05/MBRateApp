@@ -131,7 +131,7 @@ class MBRateUsViewController : UIViewController {
         self.resultLabel.alpha = 0.0
         self.callToActionButton.alpha = 0.0
         self.resultLabel.isHidden = false
-        self.callToActionButton.isHidden = false
+        // self.callToActionButton.isHidden = false
         UIView.animate(withDuration: 0.5, animations: {() -> Void in
             self.resultLabel.alpha = 1.0
             self.callToActionButton.alpha = 1.0
