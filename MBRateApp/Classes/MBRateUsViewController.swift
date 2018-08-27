@@ -100,7 +100,7 @@ class MBRateUsViewController : UIViewController {
     @IBAction func starTouchedDown(_ sender: UIButton) {
         for button: UIButton in self.starButtons {
             if button.tag <= sender.tag {
-                button.setImage(starImageOn, for: UIControlState())
+               // button.setImage(starImageOn, for: UIControlState())
             }
         }
     }
@@ -108,7 +108,7 @@ class MBRateUsViewController : UIViewController {
     @IBAction func starTouchedOutside(_ sender: UIButton) {
         for button: UIButton in self.starButtons {
             if button.tag <= sender.tag {
-                button.setImage(starImageOff, for: UIControlState())
+               // button.setImage(starImageOff, for: UIControlState())
             }
         }
     }
