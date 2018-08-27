@@ -114,9 +114,9 @@ class MBRateUsViewController : UIViewController {
     }
     
     @IBAction func starTouched(_ sender: UIButton) {
-        self.starsMask.isHidden = false
+        //self.starsMask.isHidden = false
         self.rating = sender.tag
-        /*if sender.tag >= 4 {
+        if sender.tag >= 4 {
             self.resultLabel.text = self.rateUsInfo?.positive
             self.callToActionButton.setTitle(self.rateUsInfo?.onPositiveButtonText, for: UIControlState())
             self.shouldRate = true
@@ -127,7 +127,7 @@ class MBRateUsViewController : UIViewController {
             self.callToActionButton.setTitle(self.rateUsInfo?.onNegativeButtonText, for: UIControlState())
             self.shouldRate = false
             self.callToActionButton.backgroundColor = self.rateUsInfo?.negativeButtonColor
-        }*/
+        }
         self.resultLabel.alpha = 0.0
         self.callToActionButton.alpha = 0.0
         self.resultLabel.isHidden = false
