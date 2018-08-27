@@ -100,7 +100,7 @@ class MBRateUsViewController : UIViewController {
     @IBAction func starTouchedDown(_ sender: UIButton) {
         for button: UIButton in self.starButtons {
             if button.tag <= sender.tag {
-               // button.setImage(starImageOn, for: UIControlState())
+                button.setImage(starImageOn, for: UIControlState())
             }
         }
     }
@@ -108,13 +108,13 @@ class MBRateUsViewController : UIViewController {
     @IBAction func starTouchedOutside(_ sender: UIButton) {
         for button: UIButton in self.starButtons {
             if button.tag <= sender.tag {
-               // button.setImage(starImageOff, for: UIControlState())
+               button.setImage(starImageOff, for: UIControlState())
             }
         }
     }
     
     @IBAction func starTouched(_ sender: UIButton) {
-        self.starsMask.isHidden = false
+        /*self.starsMask.isHidden = false
         self.rating = sender.tag
         if sender.tag >= 4 {
             self.resultLabel.text = self.rateUsInfo?.positive
@@ -135,7 +135,7 @@ class MBRateUsViewController : UIViewController {
         UIView.animate(withDuration: 0.5, animations: {() -> Void in
             self.resultLabel.alpha = 1.0
             self.callToActionButton.alpha = 1.0
-        })
+        }) */
     }
     
     @IBAction func callToActionTouched(_ sender: UIButton) {
