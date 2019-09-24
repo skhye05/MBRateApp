@@ -11,7 +11,7 @@ import Foundation
 
 @objc open class MBRateUs: NSObject{
 
-    open static let sharedInstance = MBRateUs()
+    public static let sharedInstance = MBRateUs()
 
     open var rateUsInfo = MBRateUsInfo()
     
