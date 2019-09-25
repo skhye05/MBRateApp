@@ -11,11 +11,11 @@ import Foundation
 
 @objc open class MBRateUs: NSObject{
 
-    public static let sharedInstance = MBRateUs()
+    @objc public static let sharedInstance = MBRateUs()
 
     open var rateUsInfo = MBRateUsInfo()
     
-    open func showRateUs(_ base:UIViewController, positiveBlock:@escaping (_ rate:Int)->Void, negativeBlock:@escaping (_ rate:Int)->Void, dismissBlock:@escaping ()->Void){
+    @objc open func showRateUs(_ base:UIViewController, positiveBlock:@escaping (_ rate:Int)->Void, negativeBlock:@escaping (_ rate:Int)->Void, dismissBlock:@escaping ()->Void){
         let podBundle = Bundle(for: type(of: self))
         let storyboard = UIStoryboard(name: "RateUs", bundle: podBundle)
         let vc = storyboard.instantiateInitialViewController() as! MBRateUsViewController
@@ -29,63 +29,63 @@ import Foundation
         base.present(vc, animated: true, completion: nil)
     }
     
-    open func setTitle(_ title:String){
+    @objc open func setTitle(_ title:String){
         self.rateUsInfo.title = title
     }
     
-    open func setSubtitle(_ subtitle:String){
+    @objc open func setSubtitle(_ subtitle:String){
         self.rateUsInfo.subtitle = subtitle
     }
 
-    open func setPositive(_ positive:String){
+    @objc open func setPositive(_ positive:String){
         self.rateUsInfo.positive = positive
     }
     
-    open func setNegative(_ negative:String){
+    @objc open func setNegative(_ negative:String){
         self.rateUsInfo.negative = negative
     }
     
-    open func setBackgroundColor(_ backgroundColor:UIColor){
+    @objc open func setBackgroundColor(_ backgroundColor:UIColor){
         self.rateUsInfo.backgroundColor = backgroundColor
     }
 
-    open func setPositiveButtonColor(_ positiveButtonColor:UIColor){
+    @objc open func setPositiveButtonColor(_ positiveButtonColor:UIColor){
         self.rateUsInfo.positiveButtonColor = positiveButtonColor
     }
  
-    open func setNegativeButtonColor(_ negativeButtonColor:UIColor){
+    @objc open func setNegativeButtonColor(_ negativeButtonColor:UIColor){
         self.rateUsInfo.negativeButtonColor = negativeButtonColor
     }
 
-    open func setTextColor(_ textColor:UIColor){
+    @objc open func setTextColor(_ textColor:UIColor){
         self.rateUsInfo.textColor = textColor
     }
  
-    open func setEmptyStarImage(_ emptyStarImage:UIImage?){
+    @objc open func setEmptyStarImage(_ emptyStarImage:UIImage?){
         self.rateUsInfo.emptyStarImage = emptyStarImage
     }
     
-    open func setFullStarImage(_ fullStarImage:UIImage?){
+    @objc open func setFullStarImage(_ fullStarImage:UIImage?){
         self.rateUsInfo.fullStarImage = fullStarImage
     }
     
-    open func setTitleImage(_ titleImage:UIImage?){
+    @objc open func setTitleImage(_ titleImage:UIImage?){
         self.rateUsInfo.titleImage = titleImage
     }
 
-    open func setDismissButtonColor(_ dismissButtonColor:UIColor){
+    @objc open func setDismissButtonColor(_ dismissButtonColor:UIColor){
         self.rateUsInfo.dismissButtonColor = dismissButtonColor
     }
 
-    open func setItunesId(_ itunesId:String){
+    @objc open func setItunesId(_ itunesId:String){
         self.rateUsInfo.itunesId = itunesId
     }
     
-    open func setOnPositiveButtonText(_ onPositiveButtonText:String){
+    @objc open func setOnPositiveButtonText(_ onPositiveButtonText:String){
         self.rateUsInfo.onPositiveButtonText = onPositiveButtonText
     }
     
-    open func setOnNegativeButtonText(_ onNegativeButtonText:String){
+    @objc open func setOnNegativeButtonText(_ onNegativeButtonText:String){
         self.rateUsInfo.onNegativeButtonText = onNegativeButtonText
     }
     
